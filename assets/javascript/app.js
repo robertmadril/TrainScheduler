@@ -69,7 +69,17 @@ database.ref().on("child_added", function (snapshot) {
 }, function (err) {
     //error message if database is not connecting
     console.log("Oh no :(. This is the error: " + err);
-})
+});
+
+/*
+
+Edge cases:
+
+no input on all fields.
+Incorrect  time input.
+Instructions on field input
+
+*/
 
 
 
