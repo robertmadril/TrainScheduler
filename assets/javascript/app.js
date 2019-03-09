@@ -50,7 +50,7 @@ database.ref().on("child_added", function (snapshot) {
     var tRemainder = diffTime % dbFrequency;
     var tMinutesTillTrain = dbFrequency - tRemainder;
     var nextTrain = moment().add(tMinutesTillTrain, "minutes");
-    var nextTrainPretty = moment(nextTrain, "X").format("HH:mm");
+    var nextTrainPretty = moment(nextTrain, "X").format("hh:mm A");
 
 
 
