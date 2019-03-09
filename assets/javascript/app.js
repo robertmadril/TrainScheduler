@@ -34,7 +34,16 @@
   });
 
   database.ref().on("child_added", function(snapshot){
-      
+
+    var sv = snapshot.val();
+
+    var dbName = sv.name;
+    var dbDestination = sv.destination;
+    var dbFirstTrain = sv.firstTrain;
+    var dbFrequency = sv.frequency;
+
+    
+
   }, function(err){
 
   })
