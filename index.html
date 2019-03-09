@@ -1,23 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Train Scheduler</title>
 </head>
-<body>
 
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
-    <script src="assets/javascript/app.js"></script>
+<body>
+    <div class="container">
+        <div style="background-color: black" class="jumbotron">
+            <h1 style="color: white;" class="display-4 text-center">Train Scheduler</h1>
+            <p style="color: white; " class="lead text-center">Don't miss the train</p>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                Train Schedule
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency (min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Minutes Away</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-display">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <br>
+
+        <div class="card">
+            <div class="card-header">
+                Add Employee
+            </div>
+
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="empName">Train Name</label>
+                        <input type="text" class="form-control" id="name-display" placeholder="Enter name">
+                    </div>
+                    <div class="form-group">
+                        <label for="empRole">Destination</label>
+                        <input type="text" class="form-control" id="role-display" placeholder="Enter role">
+                    </div>
+                    <div class="form-group">
+                        <label for="empStartDate">First Train</label>
+                        <input type="text" class="form-control" id="start-date-display" placeholder="Enter start date">
+                    </div>
+                    <div class="form-group">
+                        <label for="empRate">Frequency</label>
+                        <input type="text" class="form-control" id="month-rate-display" placeholder="Enter rate">
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="submit-btn">Submit</button>
+                </form>
+            </div>
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+        <script src="assets/javascript/app.js"></script>
 </body>
+
 </html>
